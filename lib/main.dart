@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginapp/tela_inicial.dart';
 
 void main() {
   runApp(LoginApp());
@@ -22,7 +23,7 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Login Portal do Aluno',
         style: TextStyle(
-          color: const Color.fromARGB(255, 48, 6, 236),
+          color: const Color.fromARGB(255, 245, 244, 247),
           fontSize: 22,
           fontWeight: FontWeight.bold,
 
@@ -31,6 +32,7 @@ class LoginPage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 238, 49, 2),
         elevation: 4,
       ),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -61,10 +63,15 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 32.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Todolist(),),
+                );
+              },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 64, 64, 136),
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
                 padding: EdgeInsets.symmetric(horizontal: 48, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
